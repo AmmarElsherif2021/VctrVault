@@ -1,0 +1,39 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v10.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v10.0": {
+      "vctr-vault.Simulation/1.0.0": {
+        "dependencies": {
+          "vctr-vault.Core": "1.0.0"
+        },
+        "runtime": {
+          "vctr-vault.Simulation.dll": {}
+        }
+      },
+      "vctr-vault.Core/1.0.0": {
+        "runtime": {
+          "vctr-vault.Core.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "vctr-vault.Simulation/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "vctr-vault.Core/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

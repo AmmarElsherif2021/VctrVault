@@ -1,0 +1,15 @@
+C:\Users\User\Desktop\VctrVault\vctr-vault.Business\bin\Debug\net10.0\vctr-vault.Business.deps.json
+C:\Users\User\Desktop\VctrVault\vctr-vault.Business\bin\Debug\net10.0\vctr-vault.Business.dll
+C:\Users\User\Desktop\VctrVault\vctr-vault.Business\bin\Debug\net10.0\vctr-vault.Business.pdb
+C:\Users\User\Desktop\VctrVault\vctr-vault.Business\obj\Debug\net10.0\vctr-vault.Business.csproj.AssemblyReference.cache
+C:\Users\User\Desktop\VctrVault\vctr-vault.Business\obj\Debug\net10.0\vctr-vault.Business.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\Desktop\VctrVault\vctr-vault.Business\obj\Debug\net10.0\vctr-vault.Business.AssemblyInfoInputs.cache
+C:\Users\User\Desktop\VctrVault\vctr-vault.Business\obj\Debug\net10.0\vctr-vault.Business.AssemblyInfo.cs
+C:\Users\User\Desktop\VctrVault\vctr-vault.Business\obj\Debug\net10.0\vctr-vault.Business.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\VctrVault\vctr-vault.Business\obj\Debug\net10.0\vctr-vau.36307A7F.Up2Date
+C:\Users\User\Desktop\VctrVault\vctr-vault.Business\obj\Debug\net10.0\vctr-vault.Business.dll
+C:\Users\User\Desktop\VctrVault\vctr-vault.Business\obj\Debug\net10.0\refint\vctr-vault.Business.dll
+C:\Users\User\Desktop\VctrVault\vctr-vault.Business\obj\Debug\net10.0\vctr-vault.Business.pdb
+C:\Users\User\Desktop\VctrVault\vctr-vault.Business\obj\Debug\net10.0\ref\vctr-vault.Business.dll
+C:\Users\User\Desktop\VctrVault\vctr-vault.Business\bin\Debug\net10.0\vctr-vault.Core.dll
+C:\Users\User\Desktop\VctrVault\vctr-vault.Business\bin\Debug\net10.0\vctr-vault.Core.pdb

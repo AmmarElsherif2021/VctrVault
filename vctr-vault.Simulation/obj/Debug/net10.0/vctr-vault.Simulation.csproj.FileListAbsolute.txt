@@ -1,0 +1,15 @@
+C:\Users\User\Desktop\VctrVault\vctr-vault.Simulation\bin\Debug\net10.0\vctr-vault.Simulation.deps.json
+C:\Users\User\Desktop\VctrVault\vctr-vault.Simulation\bin\Debug\net10.0\vctr-vault.Simulation.dll
+C:\Users\User\Desktop\VctrVault\vctr-vault.Simulation\bin\Debug\net10.0\vctr-vault.Simulation.pdb
+C:\Users\User\Desktop\VctrVault\vctr-vault.Simulation\bin\Debug\net10.0\vctr-vault.Core.dll
+C:\Users\User\Desktop\VctrVault\vctr-vault.Simulation\bin\Debug\net10.0\vctr-vault.Core.pdb
+C:\Users\User\Desktop\VctrVault\vctr-vault.Simulation\obj\Debug\net10.0\vctr-vault.Simulation.csproj.AssemblyReference.cache
+C:\Users\User\Desktop\VctrVault\vctr-vault.Simulation\obj\Debug\net10.0\vctr-vault.Simulation.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\Desktop\VctrVault\vctr-vault.Simulation\obj\Debug\net10.0\vctr-vault.Simulation.AssemblyInfoInputs.cache
+C:\Users\User\Desktop\VctrVault\vctr-vault.Simulation\obj\Debug\net10.0\vctr-vault.Simulation.AssemblyInfo.cs
+C:\Users\User\Desktop\VctrVault\vctr-vault.Simulation\obj\Debug\net10.0\vctr-vault.Simulation.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\VctrVault\vctr-vault.Simulation\obj\Debug\net10.0\vctr-vau.F237CF4C.Up2Date
+C:\Users\User\Desktop\VctrVault\vctr-vault.Simulation\obj\Debug\net10.0\vctr-vault.Simulation.dll
+C:\Users\User\Desktop\VctrVault\vctr-vault.Simulation\obj\Debug\net10.0\refint\vctr-vault.Simulation.dll
+C:\Users\User\Desktop\VctrVault\vctr-vault.Simulation\obj\Debug\net10.0\vctr-vault.Simulation.pdb
+C:\Users\User\Desktop\VctrVault\vctr-vault.Simulation\obj\Debug\net10.0\ref\vctr-vault.Simulation.dll

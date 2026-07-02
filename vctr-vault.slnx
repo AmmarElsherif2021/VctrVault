@@ -1,0 +1,7 @@
+<Solution>
+  <Project Path="vctr-vault.Business/vctr-vault.Business.csproj" />
+  <Project Path="vctr-vault.Console/vctr-vault.Console.csproj" />
+  <Project Path="vctr-vault.Core/vctr-vault.Core.csproj" />
+  <Project Path="vctr-vault.Data/vctr-vault.Data.csproj" />
+  <Project Path="vctr-vault.Simulation/vctr-vault.Simulation.csproj" />
+</Solution>
