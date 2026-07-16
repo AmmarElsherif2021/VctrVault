@@ -6,7 +6,7 @@ namespace vctr_vault.Core.Interfaces
     {
         Task<StockTransaction> GetByIdAsync(string Id);
         Task AddAsync(StockTransaction transaction);
-        Task UpdateAsync(StockTransaction transaction);
+        Task UpdateAsync(string Id,StockTransaction transaction);
         Task<IEnumerable<StockTransaction>> GetByMaterialId(string materialId);
     }
 }

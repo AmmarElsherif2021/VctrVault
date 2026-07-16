@@ -15,6 +15,6 @@ public record ReceiptHistoryDTO
     public required decimal UnitCost { get; init; }           // e.g. 12.50
     public required decimal TotalCost { get; init; }          // e.g. 6250.00
     public required CurrencyCode Currency { get; init; }      // e.g. CurrencyCode.USD
-    public required string Phase { get; init; }               // e.g. "Completed"
+    public required string State { get; init; }               // e.g. "Completed"
     public required DateTime TransactionDate { get; init; }   // e.g. 2026-06-28
 }

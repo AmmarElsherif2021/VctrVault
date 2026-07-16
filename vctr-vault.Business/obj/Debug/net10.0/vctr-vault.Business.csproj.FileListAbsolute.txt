@@ -13,3 +13,4 @@ C:\Users\User\Desktop\VctrVault\vctr-vault.Business\obj\Debug\net10.0\vctr-vault
 C:\Users\User\Desktop\VctrVault\vctr-vault.Business\obj\Debug\net10.0\ref\vctr-vault.Business.dll
 C:\Users\User\Desktop\VctrVault\vctr-vault.Business\bin\Debug\net10.0\vctr-vault.Core.dll
 C:\Users\User\Desktop\VctrVault\vctr-vault.Business\bin\Debug\net10.0\vctr-vault.Core.pdb
+C:\Users\User\Desktop\VctrVault\vctr-vault.Business\obj\Debug\net10.0\vctr-vault.Business.sourcelink.json

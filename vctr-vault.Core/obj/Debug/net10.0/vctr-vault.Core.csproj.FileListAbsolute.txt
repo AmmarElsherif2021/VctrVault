@@ -9,3 +9,4 @@ C:\Users\User\Desktop\VctrVault\vctr-vault.Core\obj\Debug\net10.0\vctr-vault.Cor
 C:\Users\User\Desktop\VctrVault\vctr-vault.Core\obj\Debug\net10.0\refint\vctr-vault.Core.dll
 C:\Users\User\Desktop\VctrVault\vctr-vault.Core\obj\Debug\net10.0\vctr-vault.Core.pdb
 C:\Users\User\Desktop\VctrVault\vctr-vault.Core\obj\Debug\net10.0\ref\vctr-vault.Core.dll
+C:\Users\User\Desktop\VctrVault\vctr-vault.Core\obj\Debug\net10.0\vctr-vault.Core.sourcelink.json

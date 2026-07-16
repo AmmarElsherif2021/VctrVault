@@ -10,6 +10,7 @@ namespace vctr_vault.Core.Entities
     public class AdjustmentTransaction : StockTransaction
     {
         public AdjustmentTransaction(
+            
             TransType transactionType, 
             string materialId, 
             decimal quantity, 
@@ -20,12 +21,14 @@ namespace vctr_vault.Core.Entities
             Reason = reason ?? "Manual adjustment";
             
             // Adjustments are always neutral regarding external parties
-            Phase = TransState.Completed; // Auto-complete adjustments
+            State = TransState.Completed; // Auto-complete adjustments
         }
 
         public override decimal CalculateTotalCost()
         {
-            return UnitCost.HasValue ? UnitCost.Value * (decimal)Quantity : 0;
+            //UnitCost.HasValue ? UnitCost.Value * (decimal)Quantity : 
+            // --------> this code be yielded if needed for warehouse related records
+            return 0;
         }
     }
 }

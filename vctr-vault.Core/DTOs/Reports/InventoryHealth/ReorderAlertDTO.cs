@@ -2,6 +2,7 @@ namespace vctr_vault.Core.DTOs.Reports.InventoryHealth;
 // Core/DTOs/Reports/InventoryHealth/ReorderAlertDTO.cs
 // Materials where OnHandQty <= ReorderPoint — feeds Reorder() and SuggestReceipts().
 // Urgency is derived: Critical = below 50% of ReorderPoint, Warning = at or just above.
+//Shortfall=Reorder Level−Current Stock. If Shortfall > 0 → Goods need to be reordered. If Shortfall ≤ 0 → Stock is sufficient (n
 
 public record ReorderAlertDTO
 {

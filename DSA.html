@@ -1,0 +1,585 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>8-Day DSA Refresher: JS vs C# | LeetCode Plan</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(145deg, #f0f4f8 0%, #e6ecf3 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            padding: 2rem 1rem;
+        }
+
+        .container {
+            max-width: 900px;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(12px);
+            border-radius: 2rem;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1), inset 0 0 0 1px rgba(255, 255, 255, 0.6);
+            padding: 2rem;
+            transition: all 0.2s ease;
+        }
+
+        h1 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: #1e293b;
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        h1 span {
+            background: #2563eb;
+            color: white;
+            padding: 0.2rem 0.8rem;
+            border-radius: 2rem;
+            font-size: 1.1rem;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+        .subtitle {
+            color: #475569;
+            margin-bottom: 2rem;
+            font-size: 1.1rem;
+            border-left: 4px solid #2563eb;
+            padding-left: 1rem;
+        }
+
+        /* Tabs */
+        .tabs {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 2rem;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 1rem;
+        }
+        .tab-btn {
+            background: transparent;
+            border: none;
+            padding: 0.7rem 1.2rem;
+            font-weight: 600;
+            font-size: 0.95rem;
+            color: #64748b;
+            border-radius: 2rem;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            background: #f1f5f9;
+            white-space: nowrap;
+        }
+        .tab-btn:hover {
+            background: #e2e8f0;
+            color: #1e293b;
+        }
+        .tab-btn.active {
+            background: #2563eb;
+            color: white;
+            box-shadow: 0 4px 10px rgba(37, 99, 235, 0.3);
+        }
+
+        /* Day content */
+        .day-panel {
+            display: none;
+            animation: fadeSlide 0.3s ease;
+        }
+        .day-panel.active {
+            display: block;
+        }
+        @keyframes fadeSlide {
+            from { opacity: 0; transform: translateY(8px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .focus-badge {
+            background: #dbeafe;
+            color: #1e40af;
+            padding: 0.4rem 1rem;
+            border-radius: 2rem;
+            display: inline-block;
+            font-weight: 600;
+            font-size: 0.9rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .problem-list {
+            list-style: none;
+            margin: 1.2rem 0 2rem;
+        }
+        .problem-item {
+            background: #ffffff;
+            border-radius: 1rem;
+            padding: 1rem 1.2rem;
+            margin-bottom: 0.8rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+            border: 1px solid #e9eef3;
+            transition: all 0.2s;
+        }
+        .problem-item:hover {
+            box-shadow: 0 6px 14px rgba(0,0,0,0.06);
+            border-color: #cbd5e1;
+        }
+        .problem-checkbox {
+            width: 1.4rem;
+            height: 1.4rem;
+            accent-color: #2563eb;
+            cursor: pointer;
+            flex-shrink: 0;
+        }
+        .problem-info {
+            flex: 1;
+        }
+        .problem-info a {
+            font-weight: 600;
+            color: #1e293b;
+            text-decoration: none;
+            font-size: 1.05rem;
+            display: block;
+        }
+        .problem-info a:hover {
+            color: #2563eb;
+            text-decoration: underline;
+        }
+        .difficulty {
+            font-size: 0.8rem;
+            font-weight: 600;
+            padding: 0.2rem 0.6rem;
+            border-radius: 1rem;
+            background: #f1f5f9;
+            color: #475569;
+            display: inline-block;
+            margin-top: 0.2rem;
+        }
+        .difficulty.easy {
+            background: #dcfce7;
+            color: #166534;
+        }
+        .difficulty.medium {
+            background: #fef9c3;
+            color: #854d0e;
+        }
+
+        .comparison-section {
+            background: #f8fafc;
+            border-radius: 1rem;
+            padding: 1.2rem 1.5rem;
+            border: 1px solid #e2e8f0;
+            margin-top: 1.5rem;
+        }
+        .comparison-title {
+            font-weight: 700;
+            font-size: 1.1rem;
+            margin-bottom: 0.8rem;
+            color: #0f172a;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            user-select: none;
+        }
+        .comparison-title:hover {
+            color: #2563eb;
+        }
+        .comparison-details {
+            display: none;
+            margin-top: 1rem;
+            line-height: 1.7;
+            color: #334155;
+        }
+        .comparison-details.open {
+            display: block;
+        }
+        .arrow-icon {
+            transition: transform 0.2s ease;
+        }
+        .arrow-icon.open {
+            transform: rotate(180deg);
+        }
+
+        .progress-summary {
+            margin-bottom: 1.5rem;
+            font-size: 0.9rem;
+            color: #475569;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .reset-btn {
+            background: none;
+            border: 1px solid #cbd5e1;
+            padding: 0.3rem 0.8rem;
+            border-radius: 1rem;
+            cursor: pointer;
+            font-size: 0.8rem;
+            color: #64748b;
+        }
+        .reset-btn:hover {
+            background: #fee2e2;
+            border-color: #fca5a5;
+            color: #b91c1c;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 1.2rem;
+            }
+            .tabs {
+                gap: 0.3rem;
+            }
+            .tab-btn {
+                padding: 0.5rem 0.9rem;
+                font-size: 0.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>
+            📘 DSA Refresher
+            <span>JS ↔ C#</span>
+        </h1>
+        <div class="subtitle">8 days · LeetCode problems · Language comparison</div>
+
+        <div class="progress-summary">
+            <span id="progressText">Completed: 0 / 32</span>
+            <button class="reset-btn" id="resetProgressBtn">↺ Reset progress</button>
+        </div>
+
+        <div class="tabs" id="tabContainer">
+            <!-- generated by JS -->
+        </div>
+
+        <div id="dayContentContainer">
+            <!-- day panels generated by JS -->
+        </div>
+    </div>
+
+    <script>
+        (function() {
+            // ----- DATA: complete plan -----
+            const planData = [
+                {
+                    day: 1,
+                    focus: "Arrays & Basic Iteration",
+                    comparison: [
+                        "Declaration: JS let arr = [1,2,3] vs C# int[] arr = {1,2,3} or var list = new List<int> {1,2,3}. Arrays are fixed-size in C#; List<T> is the dynamic cousin.",
+                        "Indexing: Both use arr[i].",
+                        "Length: JS arr.length vs C# arr.Length (property).",
+                        "Adding elements: JS arr.push(x) vs C# list.Add(x). Fixed arrays can't resize, so Merge Sorted Array forces in-place index manipulation.",
+                        "Iteration: C# foreach (var x in arr) works like JS for...of. LINQ’s List.ForEach resembles .forEach(). Two Sum often solved with nested loops in both, but C# developers often reach for Dictionary early."
+                    ],
+                    problems: [
+                        { name: "Two Sum", url: "https://leetcode.com/problems/two-sum/", difficulty: "easy" },
+                        { name: "Contains Duplicate", url: "https://leetcode.com/problems/contains-duplicate/", difficulty: "easy" },
+                        { name: "Merge Sorted Array", url: "https://leetcode.com/problems/merge-sorted-array/", difficulty: "easy" },
+                        { name: "Best Time to Buy and Sell Stock", url: "https://leetcode.com/problems/best-time-to-buy-and-sell-stock/", difficulty: "easy" }
+                    ]
+                },
+                {
+                    day: 2,
+                    focus: "Strings & Immutability",
+                    comparison: [
+                        "Immutability: Both JS and C# strings are immutable. C# provides StringBuilder; JS developers often use array join.",
+                        "Character access: JS str[i] or str.charAt(i). C# str[i] returns a char.",
+                        "Case conversion: str.ToLower() in C# vs str.toLowerCase() in JS.",
+                        "Splitting/joining: Very similar.",
+                        "Palindrome problems: C# Char.IsLetterOrDigit vs JS regex or charCodeAt ranges.",
+                        "Anagrams: JS [...str].sort().join('') vs C# String.Concat(str.OrderBy(c => c)) using LINQ, or char array sort then new string(arr). Group Anagrams forces dictionary usage with string keys."
+                    ],
+                    problems: [
+                        { name: "Valid Palindrome", url: "https://leetcode.com/problems/valid-palindrome/", difficulty: "easy" },
+                        { name: "Valid Anagram", url: "https://leetcode.com/problems/valid-anagram/", difficulty: "easy" },
+                        { name: "Longest Substring Without Repeating Characters", url: "https://leetcode.com/problems/longest-substring-without-repeating-characters/", difficulty: "medium" },
+                        { name: "Group Anagrams", url: "https://leetcode.com/problems/group-anagrams/", difficulty: "medium" }
+                    ]
+                },
+                {
+                    day: 3,
+                    focus: "Hash Tables & Sets",
+                    comparison: [
+                        "Declaring a dictionary: JS new Map() or {}; C# new Dictionary<int,int>().",
+                        "Default values: JS map.get(key) || 0 because undefined is falsy; C# dict.TryGetValue(key, out val) or dict.GetValueOrDefault(key). Subarray Sum Equals K highlights this difference.",
+                        "Set: C# HashSet<int> analogous to JS Set.",
+                        "Iteration: JS for (const [k,v] of map); C# foreach(var kvp in dict) gives KeyValuePair.",
+                        "Ordered dictionaries: JS Map preserves insertion order; C# Dictionary does not guarantee order – use SortedDictionary if needed."
+                    ],
+                    problems: [
+                        { name: "Intersection of Two Arrays II", url: "https://leetcode.com/problems/intersection-of-two-arrays-ii/", difficulty: "easy" },
+                        { name: "First Unique Character in a String", url: "https://leetcode.com/problems/first-unique-character-in-a-string/", difficulty: "easy" },
+                        { name: "Design HashMap", url: "https://leetcode.com/problems/design-hashmap/", difficulty: "easy" },
+                        { name: "Subarray Sum Equals K", url: "https://leetcode.com/problems/subarray-sum-equals-k/", difficulty: "medium" }
+                    ]
+                },
+                {
+                    day: 4,
+                    focus: "Linked Lists",
+                    comparison: [
+                        "Defining a node: JS class or function; C# public class ListNode { public int val; public ListNode next; ... }.",
+                        "Null checks: Both use null. C# has nullable reference type warnings, forcing explicit handling.",
+                        "Equality: Reference equality == checks address in both.",
+                        "Memory: No manual memory management, but C# value types (structs) can be used for high-performance nodes (rare in interviews).",
+                        "Pointer manipulation: Identical logic. Reverse Linked List pattern same; only syntax differs (var curr = head vs let curr = head)."
+                    ],
+                    problems: [
+                        { name: "Reverse Linked List", url: "https://leetcode.com/problems/reverse-linked-list/", difficulty: "easy" },
+                        { name: "Merge Two Sorted Lists", url: "https://leetcode.com/problems/merge-two-sorted-lists/", difficulty: "easy" },
+                        { name: "Linked List Cycle", url: "https://leetcode.com/problems/linked-list-cycle/", difficulty: "easy" },
+                        { name: "Remove Nth Node From End of List", url: "https://leetcode.com/problems/remove-nth-node-from-end-of-list/", difficulty: "medium" }
+                    ]
+                },
+                {
+                    day: 5,
+                    focus: "Stacks & Queues",
+                    comparison: [
+                        "Stack: C# Stack<T> with Push, Pop, Peek. JS uses array.push/pop.",
+                        "Queue: C# Queue<T> with Enqueue, Dequeue, Peek. JS uses array.push/shift (inefficient) or custom class.",
+                        "Implement Queue using Stacks forces C# built-in Stack<int> calls; JS would just use arrays.",
+                        "Tuple / value pair: Daily Temperatures needs index+temp. JS: [index, temp]; C#: (int idx, int val) ValueTuple or Tuple<int,int>.",
+                        "Min Stack: C# Stack straightforward. Note Stack.Pop() returns the value, like JS pop()."
+                    ],
+                    problems: [
+                        { name: "Valid Parentheses", url: "https://leetcode.com/problems/valid-parentheses/", difficulty: "easy" },
+                        { name: "Implement Queue using Stacks", url: "https://leetcode.com/problems/implement-queue-using-stacks/", difficulty: "easy" },
+                        { name: "Min Stack", url: "https://leetcode.com/problems/min-stack/", difficulty: "easy" },
+                        { name: "Daily Temperatures", url: "https://leetcode.com/problems/daily-temperatures/", difficulty: "medium" }
+                    ]
+                },
+                {
+                    day: 6,
+                    focus: "Trees & Recursion",
+                    comparison: [
+                        "Node definition: C# public class TreeNode { public int val; public TreeNode left, right; } vs JS class TreeNode.",
+                        "Recursion: Same pattern. Stack overflow limits differ slightly but irrelevant.",
+                        "Null checks: if (node == null) return; works in both.",
+                        "Queue for BFS: C# Queue<TreeNode> with Enqueue/Dequeue; JS array shift (or linked-list queue).",
+                        "Level Order Traversal forces level size tracking. C# queue.Count vs JS queue.length."
+                    ],
+                    problems: [
+                        { name: "Maximum Depth of Binary Tree", url: "https://leetcode.com/problems/maximum-depth-of-binary-tree/", difficulty: "easy" },
+                        { name: "Invert Binary Tree", url: "https://leetcode.com/problems/invert-binary-tree/", difficulty: "easy" },
+                        { name: "Same Tree", url: "https://leetcode.com/problems/same-tree/", difficulty: "easy" },
+                        { name: "Binary Tree Level Order Traversal", url: "https://leetcode.com/problems/binary-tree-level-order-traversal/", difficulty: "medium" }
+                    ]
+                },
+                {
+                    day: 7,
+                    focus: "Sorting, Searching & LINQ vs. JS callbacks",
+                    comparison: [
+                        "Sorting: JS arr.sort((a,b) => a - b). C# Array.Sort(arr) for primitives, or list.Sort((a,b) => a.CompareTo(b)). Merge Intervals: intervals.sort((a,b)=>a[0]-b[0]) vs intervals.Sort((a,b) => a[0].CompareTo(b[0])).",
+                        "Binary Search: C# has Array.BinarySearch; in JS you implement your own.",
+                        "LINQ chains: C# .Where().Select().ToList() vs JS .filter().map().",
+                        "Kth Largest: nums.OrderByDescending(x => x).Take(k).Last() vs nums.sort((a,b)=>b-a)[k-1]."
+                    ],
+                    problems: [
+                        { name: "Binary Search", url: "https://leetcode.com/problems/binary-search/", difficulty: "easy" },
+                        { name: "Search in Rotated Sorted Array", url: "https://leetcode.com/problems/search-in-rotated-sorted-array/", difficulty: "medium" },
+                        { name: "Kth Largest Element in an Array", url: "https://leetcode.com/problems/kth-largest-element-in-an-array/", difficulty: "medium" },
+                        { name: "Merge Intervals", url: "https://leetcode.com/problems/merge-intervals/", difficulty: "medium" }
+                    ]
+                },
+                {
+                    day: 8,
+                    focus: "Dynamic Programming & Memoization",
+                    comparison: [
+                        "Memoization cache: JS const memo = {} or new Map(); C# Dictionary<int, int> or Dictionary<(int, int), int> with tuple keys. Longest Common Subsequence uses (i, j) tuple: var key = (i, j); if (memo.ContainsKey(key)) return memo[key];.",
+                        "Array filling: C# int[] dp = new int[n+1]; dp[0]=... vs JS Array(n+1).fill(0).",
+                        "Int32 boundaries: Both 32-bit int. C# int.MaxValue instead of Infinity. In Coin Change, initialize with int.MaxValue.",
+                        "Recursion vs iteration: Same patterns. C# may throw StackOverflowException for deep recursion, but LeetCode constraints safe.",
+                        "Local functions: C# allows inner functions that capture variables, similar to JS nested arrow functions."
+                    ],
+                    problems: [
+                        { name: "Climbing Stairs", url: "https://leetcode.com/problems/climbing-stairs/", difficulty: "easy" },
+                        { name: "House Robber", url: "https://leetcode.com/problems/house-robber/", difficulty: "medium" },
+                        { name: "Coin Change", url: "https://leetcode.com/problems/coin-change/", difficulty: "medium" },
+                        { name: "Longest Common Subsequence", url: "https://leetcode.com/problems/longest-common-subsequence/", difficulty: "medium" }
+                    ]
+                }
+            ];
+
+            // ----- State management -----
+            const STORAGE_KEY = 'dsa8day_progress';
+            let completedProblems = new Set(); // store "day-index" strings like "0-0"
+
+            function loadProgress() {
+                try {
+                    const saved = localStorage.getItem(STORAGE_KEY);
+                    if (saved) {
+                        const arr = JSON.parse(saved);
+                        completedProblems = new Set(arr);
+                    }
+                } catch (e) {
+                    completedProblems = new Set();
+                }
+            }
+
+            function saveProgress() {
+                localStorage.setItem(STORAGE_KEY, JSON.stringify([...completedProblems]));
+                updateProgressText();
+            }
+
+            function isCompleted(dayIndex, problemIndex) {
+                return completedProblems.has(`${dayIndex}-${problemIndex}`);
+            }
+
+            function toggleCompleted(dayIndex, problemIndex, checkbox) {
+                const key = `${dayIndex}-${problemIndex}`;
+                if (checkbox.checked) {
+                    completedProblems.add(key);
+                } else {
+                    completedProblems.delete(key);
+                }
+                saveProgress();
+            }
+
+            function resetProgress() {
+                completedProblems.clear();
+                saveProgress();
+                // Update all checkboxes
+                document.querySelectorAll('.problem-checkbox').forEach(cb => {
+                    cb.checked = false;
+                });
+            }
+
+            function updateProgressText() {
+                const total = planData.reduce((sum, day) => sum + day.problems.length, 0);
+                const completedCount = completedProblems.size;
+                document.getElementById('progressText').textContent = `Completed: ${completedCount} / ${total}`;
+            }
+
+            // ----- Render UI -----
+            function renderTabs() {
+                const tabContainer = document.getElementById('tabContainer');
+                tabContainer.innerHTML = '';
+                planData.forEach((day, idx) => {
+                    const btn = document.createElement('button');
+                    btn.className = `tab-btn ${idx === 0 ? 'active' : ''}`;
+                    btn.textContent = `Day ${day.day}`;
+                    btn.dataset.dayIndex = idx;
+                    btn.addEventListener('click', () => switchTab(idx));
+                    tabContainer.appendChild(btn);
+                });
+            }
+
+            function renderDayPanels() {
+                const container = document.getElementById('dayContentContainer');
+                container.innerHTML = '';
+                planData.forEach((day, dayIdx) => {
+                    const panel = document.createElement('div');
+                    panel.className = `day-panel ${dayIdx === 0 ? 'active' : ''}`;
+                    panel.dataset.dayIndex = dayIdx;
+
+                    // Focus badge
+                    const focusBadge = document.createElement('div');
+                    focusBadge.className = 'focus-badge';
+                    focusBadge.textContent = `🎯 Focus: ${day.focus}`;
+                    panel.appendChild(focusBadge);
+
+                    // Problems list
+                    const ul = document.createElement('ul');
+                    ul.className = 'problem-list';
+                    day.problems.forEach((prob, probIdx) => {
+                        const li = document.createElement('li');
+                        li.className = 'problem-item';
+
+                        const cb = document.createElement('input');
+                        cb.type = 'checkbox';
+                        cb.className = 'problem-checkbox';
+                        cb.checked = isCompleted(dayIdx, probIdx);
+                        cb.addEventListener('change', (e) => {
+                            toggleCompleted(dayIdx, probIdx, e.target);
+                        });
+
+                        const infoDiv = document.createElement('div');
+                        infoDiv.className = 'problem-info';
+                        const link = document.createElement('a');
+                        link.href = prob.url;
+                        link.target = '_blank';
+                        link.rel = 'noopener noreferrer';
+                        link.textContent = prob.name;
+                        const diffSpan = document.createElement('span');
+                        diffSpan.className = `difficulty ${prob.difficulty}`;
+                        diffSpan.textContent = prob.difficulty.charAt(0).toUpperCase() + prob.difficulty.slice(1);
+
+                        infoDiv.appendChild(link);
+                        infoDiv.appendChild(diffSpan);
+                        li.appendChild(cb);
+                        li.appendChild(infoDiv);
+                        ul.appendChild(li);
+                    });
+                    panel.appendChild(ul);
+
+                    // Comparison section (collapsible)
+                    const compSection = document.createElement('div');
+                    compSection.className = 'comparison-section';
+                    const compTitle = document.createElement('div');
+                    compTitle.className = 'comparison-title';
+                    compTitle.innerHTML = `🔍 Language Comparison <span class="arrow-icon">▼</span>`;
+                    const compDetails = document.createElement('div');
+                    compDetails.className = 'comparison-details';
+                    const ulComp = document.createElement('ul');
+                    ulComp.style.paddingLeft = '1.2rem';
+                    day.comparison.forEach(point => {
+                        const li = document.createElement('li');
+                        li.style.marginBottom = '0.6rem';
+                        li.textContent = point;
+                        ulComp.appendChild(li);
+                    });
+                    compDetails.appendChild(ulComp);
+                    compSection.appendChild(compTitle);
+                    compSection.appendChild(compDetails);
+
+                    compTitle.addEventListener('click', () => {
+                        compDetails.classList.toggle('open');
+                        compTitle.querySelector('.arrow-icon').classList.toggle('open');
+                    });
+
+                    panel.appendChild(compSection);
+                    container.appendChild(panel);
+                });
+            }
+
+            function switchTab(dayIndex) {
+                // Update tab buttons
+                document.querySelectorAll('.tab-btn').forEach(btn => {
+                    btn.classList.toggle('active', parseInt(btn.dataset.dayIndex) === dayIndex);
+                });
+                // Update panels
+                document.querySelectorAll('.day-panel').forEach(panel => {
+                    panel.classList.toggle('active', parseInt(panel.dataset.dayIndex) === dayIndex);
+                });
+            }
+
+            // ----- Initialization -----
+            loadProgress();
+            renderTabs();
+            renderDayPanels();
+            updateProgressText();
+
+            document.getElementById('resetProgressBtn').addEventListener('click', () => {
+                if (confirm('Reset all problem completion status?')) {
+                    resetProgress();
+                }
+            });
+
+            // Make sure first comparison is closed by default (already via CSS display:none)
+        })();
+    </script>
+</body>
+</html>

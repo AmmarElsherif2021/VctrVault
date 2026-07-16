@@ -1,3 +1,4 @@
+using vctr_vault.Core.Enums;
 namespace vctr_vault.Core.Entities
 {
 
@@ -29,7 +30,7 @@ namespace vctr_vault.Core.Entities
         public string? PaymentTerms { get; set; }
 
         /// Currency code used for transactions (ISO 4217, e.g., "USD", "EUR").
-        public string? CurrencyCode { get; set; }
+        public CurrencyCode? CurrencyCode { get; set; }
 
         /// Indicates whether the supplier is currently active for new orders.
         public bool IsActive { get; set; } = true;

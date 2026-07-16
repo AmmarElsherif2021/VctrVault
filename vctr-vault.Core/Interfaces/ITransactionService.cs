@@ -1,4 +1,5 @@
 using System.Transactions;
+using vctr_vault.Core.Entities;
 using vctr_vault.Core.Entities.Transactions;
 
 namespace vctr_vault.Core.Interfaces
@@ -20,5 +21,11 @@ namespace vctr_vault.Core.Interfaces
         Task<TransferTransaction> CreateTransferTransaction(TransferTransaction transaction);
         Task ProcessTransferTransaction(TransferTransaction transaction);
         Task<bool> ValidateTransferTransaction(TransferTransaction transaction);
+    }
+    public interface IAdjustmentTransaction
+    {
+        Task<AdjustmentTransaction> CreateAdjustmentTransaction(AdjustmentTransaction transaction);
+        Task ProcessAdjustmentTransaction(AdjustmentTransaction transaction);
+        Task<bool> ValidateAdjustmentTransaction(AdjustmentTransaction transaction);
     }
 }

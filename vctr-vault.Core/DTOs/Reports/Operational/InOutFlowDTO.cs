@@ -3,7 +3,13 @@ namespace vctr_vault.Core.DTOs.Reports.Operational;
 // Receipt vs Issue volume per warehouse over a period.
 // Net flow = Inbound - Outbound; negative = warehouse is draining.
 
-public record InOutFlowDTO
+public record InOutFlowRequestDTO
+{
+    public required DateTime PeriodStart { get; init; }       // e.g. 2026-06-01
+    public required DateTime PeriodEnd { get; init; }         // e.g. 2026-06-30
+    public required List<string>? WarehouseIDs { get; init; } // e.g. Guid("a1b2c3...") or null for all warehouses
+}
+public record InOutFlowReportDTO
 {
     public required string WarehouseId { get; init; }           // e.g. Guid("c5d6e7...")
     public required string WarehouseName { get; init; }       // e.g. "Cairo Central"

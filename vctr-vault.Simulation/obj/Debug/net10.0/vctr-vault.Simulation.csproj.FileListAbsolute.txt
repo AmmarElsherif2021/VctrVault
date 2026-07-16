@@ -13,3 +13,4 @@ C:\Users\User\Desktop\VctrVault\vctr-vault.Simulation\obj\Debug\net10.0\vctr-vau
 C:\Users\User\Desktop\VctrVault\vctr-vault.Simulation\obj\Debug\net10.0\refint\vctr-vault.Simulation.dll
 C:\Users\User\Desktop\VctrVault\vctr-vault.Simulation\obj\Debug\net10.0\vctr-vault.Simulation.pdb
 C:\Users\User\Desktop\VctrVault\vctr-vault.Simulation\obj\Debug\net10.0\ref\vctr-vault.Simulation.dll
+C:\Users\User\Desktop\VctrVault\vctr-vault.Simulation\obj\Debug\net10.0\vctr-vault.Simulation.sourcelink.json

@@ -11,6 +11,6 @@ public record TransferLogDTO
     public required string SourceWarehouse { get; init; }     // e.g. "Cairo Central"
     public required string DestinationWarehouse { get; init; }// e.g. "Alexandria Annex"
     public required decimal Quantity { get; init; }           // e.g. 300.00
-    public required string Phase { get; init; }               // e.g. "Completed"
+    public required string State { get; init; }               // e.g. "Completed"
     public required DateTime TransactionDate { get; init; }   // e.g. 2026-06-25
 }

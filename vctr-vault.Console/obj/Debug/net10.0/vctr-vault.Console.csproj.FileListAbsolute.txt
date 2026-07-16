@@ -181,3 +181,4 @@ C:\Users\User\Desktop\VctrVault\vctr-vault.Console\bin\Debug\net10.0\vctr-vault.
 C:\Users\User\Desktop\VctrVault\vctr-vault.Console\bin\Debug\net10.0\vctr-vault.Core.pdb
 C:\Users\User\Desktop\VctrVault\vctr-vault.Console\bin\Debug\net10.0\vctr-vault.Simulation.dll
 C:\Users\User\Desktop\VctrVault\vctr-vault.Console\bin\Debug\net10.0\vctr-vault.Simulation.pdb
+C:\Users\User\Desktop\VctrVault\vctr-vault.Console\obj\Debug\net10.0\vctr-vault.Console.sourcelink.json

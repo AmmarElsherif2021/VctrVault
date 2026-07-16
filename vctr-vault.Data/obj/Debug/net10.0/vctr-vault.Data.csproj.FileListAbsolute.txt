@@ -15,3 +15,4 @@ C:\Users\User\Desktop\VctrVault\vctr-vault.Data\obj\Debug\net10.0\ref\vctr-vault
 C:\Users\User\Desktop\VctrVault\vctr-vault.Data\obj\Debug\net10.0\vctr-vau.387563E3.Up2Date
 C:\Users\User\Desktop\VctrVault\vctr-vault.Data\bin\Debug\net10.0\vctr-vault.Core.dll
 C:\Users\User\Desktop\VctrVault\vctr-vault.Data\bin\Debug\net10.0\vctr-vault.Core.pdb
+C:\Users\User\Desktop\VctrVault\vctr-vault.Data\obj\Debug\net10.0\vctr-vault.Data.sourcelink.json

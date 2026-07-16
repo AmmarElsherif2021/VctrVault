@@ -3,7 +3,14 @@ namespace vctr_vault.Core.DTOs.Reports.Operational;
 // Output of ValidateWarehouseCycleCount() and ValidateSysCycleCount().
 // Shows where physical count differs from system record — shrinkage, errors, theft.
 
-public record CycleCountVarianceDTO
+public record CycleCountVarianceRequestDTO
+{
+    public required string WarehouseId { get; init; }        // e.g. Guid("a1b2c3...")
+    public required DateTime CountDate { get; init; }        
+    public required List<string>? MaterialIds { get; init; } // e.g. Guid("b4c5d6...") or null for all materials
+    public required List<decimal>? PhysicalCountQtys { get; init; } // e.g. 100.00 or null for all materials
+}
+public record CycleCountVarianceResponseDTO
 {
     public required string MaterialId { get; init; }            // e.g. Guid("b4c5d6...")
     public required string MaterialName { get; init; }        // e.g. "Copper Wire 2.5mm"

@@ -2,7 +2,12 @@
 // Snapshot of current on-hand quantities across all warehouses.
 // Sourced from: Material + Warehouse join via StockTransaction aggregation.
 namespace vctr_vault.Core.DTOs.Reports.InventoryHealth;
-public record StockLevelSummaryDTO
+public record StockLevelSummaryRequestDTO
+{
+    public required List<string>? WarehouseIDs { get; init; } // e.g. Guid("a1b2c3...") or null for all warehouses
+    public required DateTime AsOf { get; init; }              // e.g. 2026-07-01
+}
+public record StockLevelSummaryReportDTO
 {
     public required string MaterialId { get; init; }        
     public required  string MaterialName { get; init; }    // e.g. "Steel Rod 10mm"
