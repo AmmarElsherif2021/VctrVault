@@ -3,7 +3,7 @@
 Simulation-driven inventory system for construction businesses — a focused C#/.NET solution for secure, directional stock flow and decision-support by simulation.
 
 ## Table of Contents
-- [Project Aim](#project-aim)
+- [Project Purpose](#project-aim)
 - [What this is (short)](#what-this-is-short)
 - [Architectural approach](#architectural-approach)
 - [Current project state](#current-project-state)
