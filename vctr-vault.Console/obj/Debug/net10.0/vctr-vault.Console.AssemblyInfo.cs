@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("vctr-vault.Console")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+775e09e3785576abeff383746c47345ba3232c07")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f2984ed1ec7fc2dddac8bfde2b3f1bcdcb04c41a")]
 [assembly: System.Reflection.AssemblyProductAttribute("vctr-vault.Console")]
 [assembly: System.Reflection.AssemblyTitleAttribute("vctr-vault.Console")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
