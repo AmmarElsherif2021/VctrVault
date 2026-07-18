@@ -4,7 +4,7 @@ namespace vctr_vault.Core.DTOs.Reports.Transactions;
 // All IssueTransactions — tracks what left the warehouse and to whom.
 // Useful for demand analysis and customer fulfillment auditing.
 
-public record IssueHistoryDTO
+public record IssuesHistoryDTO
 {
     public required string TransactionId { get; init; }         // e.g. Guid("a7b8c9...").ToString()
     public required string ReferenceNumber { get; init; }     // e.g. "ISS-2026-00198"
